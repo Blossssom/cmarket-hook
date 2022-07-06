@@ -16,7 +16,7 @@ export default function CartItem({
         onChange={(e) => {
           handleCheckChange(e.target.checked, item.id)
         }}
-        checked={checkedItems.includes(item.id) ? true : false} >
+        checked={checkedItems.includes(item.id) ? true : false}>
       </input>
       <div className="cart-item-thumbnail">
         <img src={item.img} alt={item.name} />

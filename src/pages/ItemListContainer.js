@@ -1,8 +1,15 @@
 import React from 'react';
 import Item from '../components/Item';
 
-function ItemListContainer({ items }) {
-  const handleClick = () => { }
+function ItemListContainer({ items, setCartItem, cartItems }) {
+  const handleClick = (e, id) => {
+    const newCartItem = {
+        "itemId": id,
+        "quantity": 1
+      };
+    setCartItem((prev) => [...prev, newCartItem]);
+  };
+
   return (
     <div id="item-list-container">
       <div id="item-list-body">
